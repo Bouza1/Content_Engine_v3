@@ -1,0 +1,58 @@
+<WindowManager>
+    Viewer:
+
+<Viewer>
+    name:"Viewer"
+    txtArea:txtArea
+
+    BoxLayout:
+        orientation:'vertical'
+
+        BoxLayout:
+            orientation:'horizontal'
+            padding:10
+            spacing:10
+            size_hint:1,0.3
+
+            Button:
+                id:backBtn
+                text:"Back"
+                size_hint: 0.1, 1
+                on_press:root.backBtn()
+                disabled: False
+
+            Label:
+                text:"Working"
+                id:titleLbl
+
+            Button:
+                id:nextBtn
+                text:"Next"
+                on_press:root.nextBtn()
+                size_hint: 0.1, 1
+                disabled: False
+
+        BoxLayout:
+            orientation:'horizontal'
+            padding:10
+            spacing:10
+            size_hint:1,0.3
+
+            Button:
+                text:"Open"
+                on_press:root.openArticle()
+            Button:
+                text:"Re-Write"
+                on_press:root.rewrite()
+            Button:
+                text: "Linked-IN"
+                on_press:root.postArticle()
+            Button:
+                text:"Twitter"
+                on_press:root.postTwitter()
+        BoxLayout:
+            orientation:'vertical'
+
+            TextInput:
+                id:txtArea
+                multiline:False

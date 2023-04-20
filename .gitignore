@@ -1,0 +1,7 @@
+deets.env
+testSel.py
+venv/
+tls/
+__pycache__/
+*.pkl
+*.exe
